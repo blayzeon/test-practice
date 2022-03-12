@@ -7,7 +7,18 @@
 */
 
 function analyzeArray(array){
-    return {min: 1};
+    let result = {};
+    for (let i = 0; i < array.length; i += 1){
+        if (!result.min || array[i] < result.min){
+            result.min = array[i];
+        }
+
+        if (!result.max || array[i] > result.max){
+            result.max = array[i]
+        }
+    }
+
+    return result;
 }
 
 module.exports = analyzeArray;
