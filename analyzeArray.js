@@ -8,6 +8,7 @@
 
 function analyzeArray(array){
     let result = {};
+    let sum = 0;
     for (let i = 0; i < array.length; i += 1){
         if (!result.min || array[i] < result.min){
             result.min = array[i];
@@ -16,8 +17,11 @@ function analyzeArray(array){
         if (!result.max || array[i] > result.max){
             result.max = array[i]
         }
+        sum += array[i];
     }
 
+    result.length = array.length;
+    result.average = sum / result.length;
     return result;
 }
 
