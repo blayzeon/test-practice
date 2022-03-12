@@ -1,4 +1,4 @@
-const caesarCipher = require('./caesarCipher');
+const caesarCipher = require('../functions/caesarCipher');
 
 test('shifts uppercase letters of a string by 1', ()=>{
     expect(caesarCipher('ABCDEF', 1)).toBe('BCDEFG');
